@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">我的爱人</span><br />
+				<span class="space comments">我会牵着你的手，走到我们满头白发的那一天</span><br />
+				<span class="space comments"/>我会守护你生命里的精彩，并陪伴你一路精彩下去。<br />
+				<span class="space comments"/>你的幸福快乐，是我一生的追求。<br />
+				<span class="space comments"/>我会每一天带着笑脸，和你说早安，<br />
+				<span class="space comments"/>我会每一晚与你道声晚安再入梦乡，<br />
+				<span class="space comments"/>我会带你去所有你想去的地方，<br />
+				<span class="space comments"/>陪你闹看你笑<br />
+				<span class="space comments"/>历经你生命中所有的点点滴滴。<br />
+				<span class="space comments"/>我期待这一生与你一起走过，<br />
+				<span class="space comments"/>走到尽头再回头看尽一生铅华满地，<br />
+				<span class="space comments"/>我期待与你慢慢变老，<br />
+				<span class="space comments"/>等我们老到哪儿也去不了，<br />
+				<span class="space comments"/>还能满载着一生的幸福快乐。<br />
+				<span class="space comments">我愿意爱你直到老去，<br />
+				<span class="space comments"/>我会为我们的未来撑起一片天空，<br />
+				<span class="space comments"/>为我们的将来担负起一生的责任，<br />
+				<span class="space comments"/>愿意为你去做每一件能让你开心快乐的事。<br />
+				<span class="space comments"/>所有我们经历的点点滴滴，<br />都是我们一辈子最美的回忆。</span> <br />
+				<br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						Albee,我爱你！
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Love u forever and ever.<br/>
+						<div class="signature">- Albee</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<audio src="love.mp3"  id="music"  autoplay="autoplay"></audio>
+	<script type="text/javascript">
+        console.log('%c  小仙女Albee  VX：k2Romm  ', 'text-shadow: 3px 1px 1px grey;background-image:-webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );color:transparent;-webkit-background-clip: text;font-size:5em;');
+        console.log("%c 有一朋友名叫王根基，", "font-size:20pt");
+        console.log("%c 某天第一次去见女友爸妈。", "font-size:20pt");
+        console.log("%c 女友爸爸：“你是小王吧！”", "font-size:20pt");
+        console.log("%c 想想又觉得不对，", "font-size:20pt");
+        console.log("%c 连忙改口道：“你是小基吧！”", "font-size:20pt");
+        console.log("%c 眼看气氛变得越来越尴尬，", "font-size:20pt");
+        console.log("%c 女友妈妈连忙出来打圆场，", "font-size:20pt");
+        console.log("%c “你就是根基吧！”", "font-size:20pt");
+        console.log("%c ...........", "font-size:20pt");
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2017, 1, 25);
+		together.setHours(20);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
